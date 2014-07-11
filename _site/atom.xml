@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Eric Jones</title>
+ <link href="http://erjjones.github.com/atom.xml" rel="self"/>
+ <link href="http://erjjones.github.com/"/>
+ <updated>2014-07-11T16:59:32-04:00</updated>
+ <id>http://erjjones.github.com</id>
+ <author>
+   <name>Eric Jones</name>
+ </author>
+ 
+ 
+ 
+</feed>
