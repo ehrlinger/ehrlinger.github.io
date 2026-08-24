@@ -101,6 +101,13 @@
       color: var(--steel);
       margin-bottom: 1rem;
     }
+    .card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 1.5rem;
+      margin-bottom: 0.35rem;
+    }
     .card p { color: var(--text); margin-bottom: 0.75rem; }
     .card p:last-child { margin-bottom: 0; }
 
@@ -242,15 +249,17 @@
       <div class="pkg">
         <div class="pkg-name">
           <a href="https://github.com/ehrlinger/ggRandomForests">ggRandomForests</a>
+          <span class="pkg-role">CRAN</span>
         </div>
         <div class="pkg-desc">Visualizing random forest models; graphical analysis of survival, regression, and classification forests.</div>
       </div>
 
       <div class="pkg">
         <div class="pkg-name">
-          <a href="https://github.com/ehrlinger/hvtiBoostmtree">hvtiBoostmtree</a>
+          <a href="https://github.com/ehrlinger/temporal_hazard">TemporalHazard</a>
+          <span class="pkg-role">CRAN</span>
         </div>
-        <div class="pkg-desc">Boosted multivariate trees for longitudinal data; an extended fork of boostmtree.</div>
+        <div class="pkg-desc">R port of the C computational core underlying the Hazard SAS module.</div>
       </div>
 
       <div class="pkg">
@@ -263,9 +272,31 @@
 
       <div class="pkg">
         <div class="pkg-name">
-          <a href="https://github.com/ehrlinger/temporal_hazard">TemporalHazard</a>
+          <a href="https://ehrlinger.github.io/hvti_graphics/">HVTI Graphics Recipes</a>
+          <span class="pkg-role">Book</span>
         </div>
-        <div class="pkg-desc">R port of the C code underlying the Hazard SAS module; pre-release.</div>
+        <div class="pkg-desc">Catalog of publication figures for clinical outcomes research &mdash; Kaplan-Meier, propensity balance, CONSORT, random-forest visualizations &mdash; each paired with reproducible code. Quarto book, CC BY 4.0.</div>
+      </div>
+
+    </div>
+
+    <h3>The HVTI R package family</h3>
+    <p class="pkg-desc">Eleven coordinated R packages behind the CORR analytic pipeline &mdash; installed, updated and version-checked as a unit with <code>hvtiR</code>. <code>ggRandomForests</code> and <code>TemporalHazard</code>, above, are members too.</p>
+
+    <div class="pkg-grid">
+
+      <div class="pkg">
+        <div class="pkg-name">
+          <a href="https://github.com/ehrlinger/hvtiR">hvtiR</a>
+        </div>
+        <div class="pkg-desc">One-command installer, version status table, and environment diagnostic for the family; members resolve from public GitHub repositories.</div>
+      </div>
+
+      <div class="pkg">
+        <div class="pkg-name">
+          <a href="https://github.com/ehrlinger/hvtiBoostmtree">hvtiBoostmtree</a>
+        </div>
+        <div class="pkg-desc">Boosted multivariate trees for longitudinal data; an extended fork of boostmtree.</div>
       </div>
 
       <div class="pkg">
@@ -277,34 +308,55 @@
 
       <div class="pkg">
         <div class="pkg-name">
+          <a href="https://github.com/ehrlinger/hvtiRbootstrap">hvtiRbootstrap</a>
+          <span class="pkg-role">WIP</span>
+        </div>
+        <div class="pkg-desc">Bootstrap model building &mdash; fit across many replicates and report how often each variable survives selection; an R port of the bootreg, SUMBOOT and cluster SAS macros.</div>
+      </div>
+
+      <div class="pkg">
+        <div class="pkg-name">
           <a href="https://github.com/ehrlinger/hvtiRdatasets">hvtiRdatasets</a>
           <span class="pkg-role">WIP</span>
         </div>
-        <div class="pkg-desc">Analysis-ready clinical datasets for HVTI CORR studies, with verification against the legacy SAS datasets they replace; in active development.</div>
+        <div class="pkg-desc">Analysis-ready clinical datasets for HVTI CORR studies, with verification against the legacy SAS datasets they replace.</div>
+      </div>
+
+      <div class="pkg">
+        <div class="pkg-name">
+          <a href="https://github.com/ehrlinger/hvtiRlifetables">hvtiRlifetables</a>
+          <span class="pkg-role">WIP</span>
+        </div>
+        <div class="pkg-desc">Age-, sex- and race-matched US reference survival; replaces the <code>%usmatchd</code> SAS macro by evaluating a stored three-phase parametric hazard fit rather than interpolating a life table.</div>
+      </div>
+
+      <div class="pkg">
+        <div class="pkg-name">
+          <a href="https://github.com/ehrlinger/hvtiPropensityScores">hvtiRpropensity</a>
+          <span class="pkg-role">WIP</span>
+        </div>
+        <div class="pkg-desc">Propensity score estimation, matching and IPTW with standardized balance diagnostics, for cardiac surgery comparative-effectiveness research.</div>
       </div>
 
       <div class="pkg">
         <div class="pkg-name">
           <a href="https://github.com/ehrlinger/hvtiRtables">hvtiRtables</a>
-          <span class="pkg-role">WIP</span>
         </div>
-        <div class="pkg-desc">Manuscript-compliant Word tables from gtsummary objects, following HVTI CORR table construction standards.</div>
+        <div class="pkg-desc">Manuscript-compliant Word tables from gtsummary objects, following HVTI CORR table construction standards, with a JTCVS submission mode.</div>
+      </div>
+
+      <div class="pkg">
+        <div class="pkg-name">
+          <a href="https://github.com/ehrlinger/hvtiRtemplates">hvtiRtemplates</a>
+        </div>
+        <div class="pkg-desc">Versioned analysis job templates and the analysis-prefix taxonomy the group organizes jobs by, so a study binds to a versioned template rather than to a copy.</div>
       </div>
 
       <div class="pkg">
         <div class="pkg-name">
           <a href="https://github.com/ehrlinger/hvtiRutilities">hvtiRutilities</a>
-          <span class="pkg-role">WIP</span>
         </div>
-        <div class="pkg-desc">Utility functions supporting reproducible HVTI research workflows; in active development.</div>
-      </div>
-
-      <div class="pkg">
-        <div class="pkg-name">
-          <a href="https://ehrlinger.github.io/hvti_graphics/">HVTI Graphics Recipes</a>
-          <span class="pkg-role">Book</span>
-        </div>
-        <div class="pkg-desc">Catalog of publication figures for clinical outcomes research &mdash; Kaplan-Meier, propensity balance, CONSORT, random-forest visualizations &mdash; each paired with reproducible code. Quarto book, CC BY 4.0.</div>
+        <div class="pkg-desc">Utility functions supporting reproducible HVTI research workflows.</div>
       </div>
 
     </div>
