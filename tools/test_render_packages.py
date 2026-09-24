@@ -31,6 +31,16 @@ MANIFEST = {
 }
 
 
+def _with_second_wip():
+    """MANIFEST plus a wip member listed after beta but sorting before it."""
+    m = json.loads(json.dumps(MANIFEST))
+    m["packages"].insert(4, {
+        "package": "alef", "repo": "ehrlinger/alef", "url": "https://github.com/ehrlinger/alef",
+        "family": "member", "blurb": "Fifth.", "cran": None, "status": "wip", "role": None})
+    m["counts"] = {"members": 5, "members_on_cran": 1, "members_github_only": 4}
+    return m
+
+
 def cards(block):
     """Split the block into per-card fragments, in document order."""
     return [c for c in block.split('<div class="pkg">')[1:]]
@@ -59,9 +69,9 @@ class GridSplitTests(unittest.TestCase):
         second = self.block.split('<div class="pkg-grid">')[2]
         self.assertEqual(names_in(second), ["delta", "gamma", "beta"])
 
-    def test_stable_members_precede_wip_members(self):
-        second = self.block.split('<div class="pkg-grid">')[2]
-        self.assertEqual(names_in(second)[-1], "beta")
+    def test_stable_members_precede_wip_members_each_group_alphabetical(self):
+        second = render_block(_with_second_wip()).split('<div class="pkg-grid">')[2]
+        self.assertEqual(names_in(second), ["delta", "gamma", "alef", "beta"])
 
 
 class BadgeTests(unittest.TestCase):
