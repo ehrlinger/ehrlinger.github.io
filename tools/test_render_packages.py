@@ -57,7 +57,11 @@ class GridSplitTests(unittest.TestCase):
 
     def test_second_grid_holds_only_github_only_members(self):
         second = self.block.split('<div class="pkg-grid">')[2]
-        self.assertEqual(names_in(second), ["beta", "gamma", "delta"])
+        self.assertEqual(names_in(second), ["delta", "gamma", "beta"])
+
+    def test_stable_members_precede_wip_members(self):
+        second = self.block.split('<div class="pkg-grid">')[2]
+        self.assertEqual(names_in(second)[-1], "beta")
 
 
 class BadgeTests(unittest.TestCase):
