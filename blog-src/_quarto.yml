@@ -1,0 +1,63 @@
+project:
+  type: website
+  output-dir: ../blog
+  render:
+    - "**/*.qmd"
+
+website:
+  title: "John Ehrlinger"
+  description: "Notes on R, survival analysis, and moving a 30-year SAS codebase to R in cardiovascular outcomes research."
+  site-url: "https://ehrlinger.github.io/blog"
+  repo-url: "https://github.com/ehrlinger/ehrlinger.github.io"
+  favicon: "favicon.svg"
+  image: "share-card.png"
+  draft-mode: gone
+  open-graph: true
+  twitter-card:
+    card-style: summary_large_image
+  navbar:
+    left:
+      - text: "Home"
+        href: "https://ehrlinger.github.io/"
+      - text: "Writing"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - icon: github
+        href: "https://github.com/ehrlinger"
+        aria-label: "GitHub"
+      - icon: linkedin
+        href: "https://linkedin.com/in/ehrlinger"
+        aria-label: "LinkedIn"
+      - icon: rss
+        href: index.xml
+        aria-label: "RSS feed"
+  page-footer:
+    left: "&copy; 2026 John Ehrlinger. Views are my own."
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      light: [default, styles/base.scss, styles/light.scss]
+      dark: [default, styles/base.scss, styles/dark.scss]
+    respect-user-color-scheme: true
+    highlight-style:
+      light: a11y-light
+      dark: a11y-dark
+    code-copy: hover
+    code-link: true
+    code-annotations: hover
+    smooth-scroll: false
+    link-external-icon: false
+    link-external-newwindow: false
+    anchor-sections: true
+    footnotes-hover: true
+    reference-location: margin
+    lightbox: true
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">

@@ -1,0 +1,9 @@
+# Defaults for every post. Override any of these in a post's own front matter.
+author: "John Ehrlinger"
+freeze: true
+toc: true
+toc-depth: 2
+toc-title: "On this page"
+title-block-banner: false
+citation: false
+reading-time: true

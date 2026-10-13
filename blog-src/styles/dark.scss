@@ -1,0 +1,32 @@
+/*-- scss:defaults --*/
+
+// Dark theme, derived from the homepage navy rather than neutral grey.
+$body-bg: #13223a;
+$body-color: #d9e2ee;
+$link-color: #8fb7ff;
+$primary: #8fb7ff;
+
+$heading-color: #f0f4f8;
+$muted-color: #9fb0c6;
+$rule-color: #2b3f5c;
+$step-color: #7d9cc0;
+$code-bg: #1a2c47;
+$code-color: #e3eaf4;
+
+$navbar-bg: #13223a;
+$navbar-fg: #e3eaf4;
+$navbar-hl: #8fb7ff;
+$footer-bg: #13223a;
+$footer-fg: #9fb0c6;
+
+$callout-color-note: #8fb7ff;
+$callout-color-tip: #6fcf9f;
+$callout-color-warning: #f0b45a;
+$callout-color-important: #ff8a7a;
+
+$code-block-bg: $code-bg;
+$code-block-border-left: $step-color;
+$code-block-bg-padding: 0.9rem;
+
+// Plots stay on white; give them a little air against the navy.
+$figure-dark-pad: 0.5rem;

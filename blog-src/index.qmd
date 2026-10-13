@@ -1,0 +1,18 @@
+---
+title: "Writing"
+description: "Notes on R, survival analysis, and moving a 30-year SAS codebase to R in cardiovascular outcomes research."
+listing:
+  contents: posts
+  type: default
+  sort: "date desc"
+  fields: [date, title, description, reading-time]
+  date-format: "MMM D, YYYY"
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  image-placeholder: ""
+  feed:
+    categories: [rstats]
+page-layout: full
+title-block-banner: false
+---
