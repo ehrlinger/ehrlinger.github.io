@@ -1,0 +1,15 @@
+---
+title: "About"
+---
+
+I'm an applied statistician and Lead Data Scientist in Cardiovascular Outcomes,
+Registries and Research (CORR) at Cleveland Clinic's Heart, Vascular & Thoracic
+Institute. I write here about R, survival and time-to-event methods, the
+open-source packages I maintain, and the work of moving a research group's
+30 years of SAS jobs onto R.
+
+The full background is on the [homepage](https://ehrlinger.github.io/), and the
+code is on [GitHub](https://github.com/ehrlinger).
+
+Views here are my own and don't represent Cleveland Clinic. Nothing on this
+site contains patient data.

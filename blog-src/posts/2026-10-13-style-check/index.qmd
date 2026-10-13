@@ -1,0 +1,110 @@
+---
+title: "Style check"
+description: "Every element a post on this site is likely to use, rendered once so the theme can be judged in one place."
+date: 2026-10-13
+categories: [meta]
+draft: true
+image: km-example.png
+---
+
+This post never publishes (`draft: true`). It exists so the theme can be
+checked against real elements: running text, headings, inline `code`, code
+blocks, a SAS and R pair, callouts, a figure, a table, margin notes and
+footnotes. Preview it with `quarto preview` from `blog-src/`.
+
+## Running text
+
+Body text is Newsreader at 18 pixels with generous leading, set to a measure
+near 68 characters. Headings, captions, tables and navigation use Atkinson
+Hyperlegible Next, which was drawn for low-vision readers and keeps `l`, `1`
+and `I` distinct, a useful property on a site full of variable names.[^fonts]
+
+[^fonts]: Code uses Atkinson Hyperlegible Mono, from the same family, so code and
+    prose share proportions.
+
+A margin note sits beside the paragraph it annotates and drops inline on a
+phone.
+
+::: {.column-margin}
+Margin notes suit asides that would otherwise break the argument: a citation,
+a caveat, a version number.
+:::
+
+### A third-level heading
+
+Links look [like this](https://ehrlinger.github.io/) and keep their underline,
+since colour alone is not enough to mark them.
+
+## Translating SAS to R
+
+The SAS-to-R series will lean on this pattern: the same step in both languages,
+one tab each.
+
+::: {.panel-tabset group="language"}
+
+## SAS
+
+```sas
+proc freq data=study.patients;
+  tables sex*nyha / chisq;
+run;
+```
+
+## R
+
+```r
+library(dplyr)
+
+patients |>
+  count(sex, nyha) |>                         # <1>
+  tidyr::pivot_wider(names_from = nyha,
+                     values_from = n)
+
+chisq.test(table(patients$sex, patients$nyha)) # <2>
+```
+
+1. `count()` gives the cell counts that `PROC FREQ` prints as its table body.
+2. The `/ chisq` option maps to a separate call; R keeps tabulation and testing apart.
+
+:::
+
+The `group="language"` attribute links every tabset on the page, so a reader
+who picks R once sees R everywhere.
+
+## Callouts
+
+::: {.callout-note}
+## Note
+Background a reader can skip without losing the thread.
+:::
+
+::: {.callout-tip}
+## In practice
+What we actually do at CORR, as opposed to what the documentation suggests.
+:::
+
+::: {.callout-warning}
+## Watch for
+SAS formats silently recode values that R will read as raw codes.
+:::
+
+## Figures and tables
+
+![Kaplan-Meier style estimates for two simulated groups. Figures open full
+size on click.](km-example.png){fig-alt="Two stepped survival curves declining
+over 20 years, Group A staying above Group B."}
+
+| Step            | SAS             | R                    |
+|-----------------|-----------------|----------------------|
+| Read data       | `libname`, `set`| `arrow::read_parquet()` |
+| Tabulate        | `proc freq`     | `dplyr::count()`     |
+| Survival curve  | `proc lifetest` | `survival::survfit()`|
+
+: Common translations. {tbl-colwidths="[30,30,40]"}
+
+> A block quote, for the occasional line worth setting apart.
+
+---
+
+That covers the elements. If any of them looks wrong in light or dark mode,
+the fix belongs in `styles/`, not in the post.

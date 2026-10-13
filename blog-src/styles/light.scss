@@ -1,0 +1,33 @@
+/*-- scss:defaults --*/
+
+// Light theme. Navy, blue and steel match the homepage at ehrlinger.github.io.
+$navy:  #1a2e4a;
+$blue:  #2563eb;
+$steel: #4b6a8a;
+
+$body-bg: #ffffff;
+$body-color: #1e293b;
+$link-color: $blue;
+$primary: $blue;
+
+$heading-color: $navy;
+$muted-color: #556479;
+$rule-color: #dde4ed;
+$step-color: $steel;
+$code-bg: #f0f4f8;
+$code-color: #1a2e4a;
+
+$navbar-bg: #ffffff;
+$navbar-fg: $navy;
+$navbar-hl: $blue;
+$footer-bg: #ffffff;
+$footer-fg: #556479;
+
+$callout-color-note: $blue;
+$callout-color-tip: #2f7d5b;
+$callout-color-warning: #a35d00;
+$callout-color-important: #b42318;
+
+$code-block-bg: $code-bg;
+$code-block-border-left: $step-color;
+$code-block-bg-padding: 0.9rem;
